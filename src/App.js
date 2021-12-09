@@ -26,7 +26,7 @@ function App() {
 			<div className="App">
 				<Navigation cart={cart} />
 				
-				<ProductContext.Provider value = {products, addItem}>
+				<ProductContext.Provider value={{ products, addItem }}>
 					<Route exact path="/">
 						<Products />
 					</Route>
