@@ -8,15 +8,17 @@ import Products from './components/Products';
 import ShoppingCart from './components/ShoppingCart';
 
 function App() {
-	const [products, setProducts] = useState(data);
+	const [products] = useState(data);
 	const [cart, setCart] = useState([]);
 
 	const addItem = item => {
 		// add the given item to the cart
-		setProducts({
-			...products,
-			item,
-		})
+		// console.log(item);
+		setCart([
+			...cart,
+			item
+		])
+		console.log(cart)
 	};
 
 	return (
